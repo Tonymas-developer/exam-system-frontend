@@ -17,6 +17,11 @@
   width: 90%;
 }
 
+.admin-login-card .toggle-password {
+  border: none;
+  outline: none;
+}
+
 .admin-login-card h1 {
   color: #fff;
   text-align: center;
