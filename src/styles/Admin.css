@@ -526,6 +526,11 @@ code {
   margin-top: 30px;
 }
 
+.admin-login .btn-primary {
+  display: flex;
+  margin: 20px auto;
+}
+
 /* Additional styles for Admin.css - ADD TO EXISTING FILE */
 
 /* Search Section */

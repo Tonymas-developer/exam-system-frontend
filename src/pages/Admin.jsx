@@ -542,8 +542,6 @@ const Admin = () => {
               <button
                 type='submit'
                 className='btn-primary'
-                display='flex'
-                margin='auto'
                 disabled={loginLoading}
               >
                 {loginLoading ? "Authenticating..." : "Login"}
