@@ -524,6 +524,7 @@ const Admin = () => {
                   <input
                     type={showPassword ? "text" : "password"}
                     id='adminSecret'
+                    className="input-login"
                     value={adminSecret}
                     onChange={(e) => setAdminSecret(e.target.value)}
                     placeholder='Enter admin password'
