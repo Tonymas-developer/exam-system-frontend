@@ -241,13 +241,10 @@ const Admin = () => {
     const token = sessionStorage.getItem("adminSessionToken");
 
     try {
-      const response = await fetch(
-        `${API_BASE_URL}/api/admin/sync-sheets`,
-        {
-          method: "POST",
-          headers: { "admin-token": token },
-        },
-      );
+      const response = await fetch(`${API_BASE_URL}/api/admin/sync-sheets`, {
+        method: "POST",
+        headers: { "admin-token": token },
+      });
 
       const data = await response.json();
 
@@ -463,17 +460,14 @@ const Admin = () => {
   const handleUpdateDay = async () => {
     const token = sessionStorage.getItem("adminSessionToken");
     try {
-      const response = await fetch(
-        `${API_BASE_URL}/api/admin/config/day`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "admin-token": token,
-          },
-          body: JSON.stringify({ day: currentDay }),
+      const response = await fetch(`${API_BASE_URL}/api/admin/config/day`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "admin-token": token,
         },
-      );
+        body: JSON.stringify({ day: currentDay }),
+      });
 
       if (response.ok) {
         alert(`✅ Exam day updated to Day ${currentDay}`);
@@ -548,6 +542,8 @@ const Admin = () => {
               <button
                 type='submit'
                 className='btn-primary'
+                display='flex'
+                margin='auto'
                 disabled={loginLoading}
               >
                 {loginLoading ? "Authenticating..." : "Login"}
